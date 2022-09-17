@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="Sample" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd">
+    <PackageHeader>
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor>Together</Vendor>
+        <Created>2006-04-11 09:11:50</Created>
+    </PackageHeader>
+    <RedefinableHeader PublicationStatus="UNDER_TEST"/>
+    <ConformanceClass GraphConformance="NON_BLOCKED"/>
+    <Participants>
+        <Participant Id="Security_Admin" Name="Security_Admin">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="Administrator" Name="Administrator">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+    </Participants>
+    <Applications>
+        <Application Id="usermnt" Name="User Maintenance"/>
+        <Application Id="companymnt" Name="Company Maintenance"/>
+    </Applications>
+    <WorkflowProcesses>
+        <WorkflowProcess Id="Security_Admin" Name="กำหนดผู้ใช้ระบบ">
+            <ProcessHeader>
+                <Created>2015-09-17 14:43:46</Created>
+            </ProcessHeader>
+            <Activities>
+                <Activity Id="usermnt" Name="User">
+                    <Description>กำหนดผู้ใช้ระบบ</Description>
+                    <Implementation>
+                        <Tool Id="usermnt" Type="APPLICATION"/>
+                    </Implementation>
+                    <Performer>Security_Admin</Performer>
+                </Activity>
+            </Activities>
+        </WorkflowProcess>
+        <WorkflowProcess Id="Setup" Name="ข้อมูลพื้นฐาน">
+            <ProcessHeader>
+                <Created>2019-12-14 14:42:51</Created>
+            </ProcessHeader>
+            <Activities>
+                <Activity Id="companymnt" Name="Company">
+                    <Description>บริษัท</Description>
+                    <Implementation>
+                        <Tool Id="companymnt" Type="APPLICATION"/>
+                    </Implementation>
+                    <Performer>Administrator</Performer>
+                </Activity>
+            </Activities>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+</Package>

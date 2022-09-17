@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="F001" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="6fd6685a-5146-4946-8af9-fc1444a3e450">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DEV Worldlease"/>
+	<parameter name="companyName" class="java.lang.String"/>
+	<parameter name="companyAddress" class="java.lang.String"/>
+	<parameter name="customerName" class="java.lang.String"/>
+	<parameter name="customerAddress" class="java.lang.String"/>
+	<parameter name="receiptNo" class="java.lang.String"/>
+	<parameter name="receiptDate" class="java.lang.String"/>
+	<parameter name="thaiAmtText" class="java.lang.String"/>
+	<parameter name="sumVat" class="java.lang.Double"/>
+	<parameter name="sumTotal" class="java.lang.Double"/>
+	<parameter name="payment" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="seq" class="java.lang.String"/>
+	<field name="desc" class="java.lang.String"/>
+	<field name="principal" class="java.lang.Double"/>
+	<field name="interest" class="java.lang.Double"/>
+	<field name="fee" class="java.lang.Double"/>
+	<field name="vat" class="java.lang.Double"/>
+	<field name="total" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="1" y="15" width="552" height="24" uuid="3e42201f-276e-4bf8-8dfa-2117f3170bea"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma Bold" size="15" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ใบเสร็จรับเงิน]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement x="450" y="0" width="40" height="15" uuid="68e31262-ff87-464d-a804-89444a0a5dd3"/>
+				<textElement>
+					<font fontName="Tahoma Bold" isBold="true"/>
+				</textElement>
+				<text><![CDATA[เลขที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="15" width="40" height="15" uuid="403a14f2-bf8f-46fe-a80b-1ca697f75af9"/>
+				<textElement>
+					<font fontName="Tahoma Bold" isBold="true"/>
+				</textElement>
+				<text><![CDATA[วันที่]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="491" y="0" width="64" height="15" isPrintWhenDetailOverflows="true" uuid="85a0a9d7-1a03-4745-baed-f21d90707cae"/>
+				<textElement textAlignment="Left">
+					<font fontName="Tahoma Bold" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{receiptNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="490" y="16" width="64" height="15" isPrintWhenDetailOverflows="true" uuid="6a1fc7fe-869b-4e32-90a5-9056da6b5771"/>
+				<textElement textAlignment="Left">
+					<font fontName="Tahoma Bold" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{receiptDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="430" height="15" isPrintWhenDetailOverflows="true" uuid="6bd4ccca-06cd-4e83-96d6-cbdc36d7e094"/>
+				<textElement textAlignment="Left">
+					<font fontName="Tahoma Bold" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="16" width="430" height="15" isPrintWhenDetailOverflows="true" uuid="1f8a32a3-2a4a-4b84-9332-5c94fb739228"/>
+				<textElement textAlignment="Left">
+					<font fontName="Tahoma Bold" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyAddress}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="40" width="430" height="15" isPrintWhenDetailOverflows="true" uuid="e0b17cb1-17a7-49da-9968-6f47ed9ef9a2"/>
+				<textElement textAlignment="Left">
+					<font fontName="Tahoma Bold" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{customerName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="55" width="430" height="15" isPrintWhenDetailOverflows="true" uuid="d34d3e58-bbf0-46ab-9b35-93575ee8efb3"/>
+				<textElement textAlignment="Left">
+					<font fontName="Tahoma Bold" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{customerAddress}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="50" y="0" width="150" height="15" uuid="27c4a1b8-9781-4fcd-beb7-aa36c0e2a2d9">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รายละเอียด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="70" height="15" uuid="3bd0885e-9814-413c-947a-a48c9d0c1693">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[เงินต้น]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="0" width="70" height="15" uuid="152d38d6-5917-487e-9f86-ab1d70ab0c36">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ดอกเบี้ย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="70" height="15" uuid="43d86cc9-d252-4cae-bd15-18019fcbdfc1">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="70" height="15" uuid="75b16d2a-d82e-4a14-9053-8cee1ed1a765">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ค่าธรรมเนียม]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="15" uuid="54a54680-a9bf-465e-b1f5-577727ee6050"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ลำดับที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="70" height="15" uuid="d622f8e5-9496-484b-9b17-2c7cfb17d155">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[จำนวนเงิน]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="50" height="15" isPrintWhenDetailOverflows="true" uuid="aada018e-b114-4958-a722-d31f29a006d1"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{seq}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="200" y="0" width="70" height="15" isPrintWhenDetailOverflows="true" uuid="d8a83062-7afa-45e8-8cd6-13772a6f1e20">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{principal}==0.0?null:$F{principal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="270" y="0" width="70" height="15" isPrintWhenDetailOverflows="true" uuid="eced1ef2-a001-45fe-8e2b-3c4f15ff40a7">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{interest}==0.0?null:$F{interest}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="340" y="0" width="70" height="15" isPrintWhenDetailOverflows="true" uuid="d79b851e-c29c-4765-8002-41722566fd7c">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fee}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="410" y="0" width="70" height="15" isPrintWhenDetailOverflows="true" uuid="0fa69c71-c21b-46dd-ba76-4b5a9a39b241">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vat}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="480" y="0" width="70" height="15" isPrintWhenDetailOverflows="true" uuid="d9b6088d-66df-4d44-bf53-7b1163b1d579">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box rightPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="50" y="0" width="150" height="15" isPrintWhenDetailOverflows="true" uuid="1622584f-bfaa-4759-a5d6-b937b3a21cef">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box leftPadding="5">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{desc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="100">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="10" width="370" height="15" isPrintWhenDetailOverflows="true" uuid="0c54ee9b-72de-4344-86ad-a5e58b1c6343"/>
+				<textElement textAlignment="Left">
+					<font fontName="Tahoma Bold" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{thaiAmtText}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="45" width="430" height="55" isPrintWhenDetailOverflows="true" uuid="838cbe60-f4f7-44ef-8e46-6d34e9944c23"/>
+				<textElement textAlignment="Left">
+					<font fontName="Tahoma Bold" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{payment}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="370" y="10" width="40" height="15" uuid="47a8e983-cbbb-4458-819a-8e6c6777905a"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tahoma Bold" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รวม]]></text>
+			</staticText>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="410" y="10" width="70" height="15" isPrintWhenDetailOverflows="true" uuid="f730d647-46d7-4cdf-b79d-063769252d3a"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tahoma Bold" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sumVat}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="479" y="10" width="71" height="15" isPrintWhenDetailOverflows="true" uuid="a424b8a7-8ecc-45fe-af45-3eadd14e1870"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tahoma Bold" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sumTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="30" width="204" height="15" uuid="97dfc069-d75e-46cc-92b1-ef7f5b0eb3fd"/>
+				<textElement>
+					<font fontName="Tahoma Bold" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ประเภทการชำระเงิน]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

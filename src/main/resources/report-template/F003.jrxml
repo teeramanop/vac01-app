@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="F003" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6fd6685a-5146-4946-8af9-fc1444a3e450">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DEV Worldlease"/>
+	<parameter name="userName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="amt" class="java.lang.Double"/>
+	<field name="remark" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="342" y="0" width="210" height="24" uuid="3e42201f-276e-4bf8-8dfa-2117f3170bea"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tahoma Bold" size="15" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Post - PAYMENT ADVICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="342" y="24" width="212" height="20" uuid="c6b1d79e-a83b-478c-bf34-14867b76a17f"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tahoma Bold" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[This documents is an integral part of Credit Advice]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="9bc46148-94cc-4ab3-b6f6-e0665a059b72"/>
+				<textFieldExpression><![CDATA["AMT = " + $F{amt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="108" y="0" width="154" height="30" uuid="1eb07354-9610-43ee-9235-295a671c9ea2"/>
+				<textFieldExpression><![CDATA[" PARAMETER = " + $P{userName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="374" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="15" uuid="c379b232-136a-4021-9a9c-30216f4824a1"/>
+				<textElement>
+					<font fontName="Tahoma Bold" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ถึง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="111" width="115" height="15" uuid="f12c3108-0caa-49ec-b2c6-62bf0ca3dac7"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[เรียน ท่านเจ้าของบัญชี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="1" width="40" height="15" uuid="68e31262-ff87-464d-a804-89444a0a5dd3"/>
+				<textElement>
+					<font fontName="Tahoma Bold" isBold="true"/>
+				</textElement>
+				<text><![CDATA[วันที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="16" width="80" height="15" uuid="25d19cee-67ac-40de-828c-27b5abb4b8a9"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transaction No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="36" width="80" height="15" uuid="7635755e-6171-43c8-a4aa-32bff368aa7f"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Ref.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="65" width="40" height="15" uuid="ce90f8f2-1ceb-4dad-bc0a-120e0e0689f5"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FAX]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="40" height="15" uuid="6a414311-e8f6-4895-aa77-6186a9c88a85"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMAIL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="141" width="234" height="15" uuid="b4bec44a-d664-41cc-bffa-327d9373ee73"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ธนาคารได้ทำการโอนเงินให้กับท่านตามคำสั่งของ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="156" width="230" height="15" uuid="e40cc961-2ab0-4888-94fc-0fc70ca737ff"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[("ผู้ชำระเงิน") หลังจากธนาคารเรียกเก็บเงินได้แล้ว]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="186" width="90" height="15" uuid="51c59e10-6321-43b9-8fff-988c99540f89"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ประเภทรายการ:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="201" width="90" height="15" uuid="c86db475-aa9a-484c-8c14-c44e150e9d3f"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Service Type:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="221" width="100" height="15" uuid="58bc0886-1d99-4050-bd85-78e2671b162c"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[จำนวนเงินโอน (บาท):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="236" width="100" height="15" uuid="d709fe66-d9c8-43d3-ad47-f83911db45a5"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Credit Amount (Baht):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="256" width="100" height="15" uuid="02d1edd3-87c1-4c81-a98f-0493502568e4"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ชื่อธนาคาร:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="271" width="100" height="15" uuid="e7cd4ff1-26dc-4b6c-b1f8-a1e15744e23f"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bank Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="286" width="100" height="15" uuid="1b30eff0-be2c-4723-9d05-4977604243ac"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[สถานที่รับเอกสาร:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="301" width="100" height="15" uuid="b087a802-b5aa-4f36-a016-05a6fc0cb869"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pickup Location:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="316" width="100" height="15" uuid="b1cce0e6-071a-4f05-b9d1-c7b6c1def30c"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[หมายเหตุ:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="331" width="100" height="15" uuid="114a512a-dd35-4f7c-8e16-056bddb1e418"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remark:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="201" width="97" height="15" uuid="e2393cdb-2cd0-42a8-94d9-3bbf3ca33bf6"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valus Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="186" width="97" height="15" uuid="8d14e5a2-86d4-4498-a11b-cbe616455535"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[วันที่เข้าบัญชี:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="236" width="97" height="15" uuid="85b1c4aa-8934-41e4-a73f-19743616320c"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fee Amount (Baht):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="221" width="97" height="15" uuid="892281d7-1a3e-4241-9275-d7b66e8a566f"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ค่าธรรมเนียม (บาท):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="271" width="97" height="15" uuid="a3c0732e-8e6e-4307-b9c9-b66f04b4e0d4"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Number:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="256" width="97" height="15" uuid="934269ed-70de-454c-9f8d-2521dd6ef2e3"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[เลขที่บัญชี:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="301" width="97" height="15" uuid="c00aa2ad-9ac9-4d5e-929e-8a2d6c45139a"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Documents Required:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="286" width="97" height="15" uuid="9b5cf42d-53fe-449e-8333-4db04496f898"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[เอกสารที่นำมาแสดง:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="353" width="230" height="15" uuid="07849361-a06b-42ca-bcb8-6ff46bb5032a"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รายละเอียดของรายการ/Instruction details:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="381" y="287" width="174" height="15" uuid="54c8cc52-f77e-4541-92f1-8176a61baa23"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tahoma Bold" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Receipt"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="96" y="0" width="112" height="30" uuid="27c4a1b8-9781-4fcd-beb7-aa36c0e2a2d9"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice Descriptions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="208" y="0" width="67" height="30" uuid="3bd0885e-9814-413c-947a-a48c9d0c1693"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="0" width="98" height="30" uuid="152d38d6-5917-487e-9f86-ab1d70ab0c36"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="0" width="90" height="30" uuid="43d86cc9-d252-4cae-bd15-18019fcbdfc1"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WHT Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="0" width="92" height="30" uuid="75b16d2a-d82e-4a14-9053-8cee1ed1a765"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vat Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="96" height="30" uuid="54a54680-a9bf-465e-b1f5-577727ee6050"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma Bold" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[    Invoice No./   Purchase Order No.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="96" y="2" width="112" height="15" isPrintWhenDetailOverflows="true" uuid="aada018e-b114-4958-a722-d31f29a006d1"/>
+				<textElement textAlignment="Left">
+					<font fontName="Tahoma Bold" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{remark}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="465" y="2" width="88" height="15" isPrintWhenDetailOverflows="true" uuid="d8a83062-7afa-45e8-8cd6-13772a6f1e20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tahoma Bold" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" mode="Opaque" x="0" y="2" width="554" height="60" isPrintWhenDetailOverflows="true" uuid="9c5ec8f5-48d4-44bc-8f2d-0d8cec151d54"/>
+				<textElement>
+					<font fontName="Tahoma Bold" size="9"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" rightIndent="0"/>
+				</textElement>
+				<text><![CDATA[Remark: 1. This document is only to indicate that the Bank has been in receipt of an instruction from the payer to proceed with the money transfer and that the transaction is being processed by the Bank. It is however not a confirmation as to a success or completion of such money transfer transaction nor is it a representation given by the Bank that such transaction will be of success.
+              2. This document does not require the signature of authorized person of the Bank since it is printed through a computer system.
+If you need further information and/or have not received such specified amount, please contact call center 027222222]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
